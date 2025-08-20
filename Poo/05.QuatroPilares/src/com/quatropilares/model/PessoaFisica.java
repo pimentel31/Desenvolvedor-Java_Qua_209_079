@@ -1,17 +1,19 @@
 package com.quatropilares.model;
 
-public class PessoaFisica extends Pessoa {
+final public class PessoaFisica extends Pessoa {
     private String nome;
-    private String dataNacimento;
+    private String dataNascimento;
     private String cpf;
 
-    public PessoaFisica(String nome, String dataNacimento, String cpf, String email, String telefone, String endereco) {
+
+    public PessoaFisica(String nome, String dataNascimento, String cpf, String email, String telefone, String endereco) {
         super(email, telefone, endereco);
         this.nome = nome;
-        this.dataNacimento = dataNacimento;
+        this.dataNascimento = dataNascimento;
         this.cpf = cpf;
 
     }
+
 
     public String getNome() {
         return this.nome;
@@ -21,12 +23,12 @@ public class PessoaFisica extends Pessoa {
         this.nome = nome;
     }
 
-    public String getDataNacimento() {
-        return this.dataNacimento;
+    public String getDataNascimento() {
+        return this.dataNascimento;
     }
 
-    public void setDataNacimento(String dataNacimento) {
-        this.dataNacimento = dataNacimento;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getCpf() {
@@ -36,5 +38,8 @@ public class PessoaFisica extends Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    
+
 
 }

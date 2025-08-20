@@ -1,21 +1,20 @@
 package com.regras.app;
 
 import java.util.Scanner;
-
 import com.regras.model.Conta;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Conta cc = new Conta(null, null, "1234-4", "12345-7", 0);
+        Conta cc = new Conta(null, null, "1234-5", "12345-6", 0);
         Scanner leia = new Scanner(System.in);
-        
-         int opcao;
-         double valor;
+
+        int opcao;
+        double valor;
 
          System.out.println("Informe o nome do titular da conta:");
          cc.titular = leia.nextLine();
          System.out.println("Informe o CPF do titular da conta:");
-         cc.cpf = leia.nextLine();
+         cc.titular = leia.nextLine();
 
          do {
             //menu
@@ -39,7 +38,7 @@ public class App {
                 case 3:
                     System.out.println("Informe o valor do saque, em R$");
                     valor = leia.nextDouble();
-                    System.out.println((valor > 0 && valor <= cc.saldo) ? "Saque efetuado com sucesso. Saldo: R$ " + cc.fazerSaque(valor) : "Valor do saque inválido.");
+                    System.out.println((valor > 0 && valor <= cc.fazerSaque(0)) ? "Saque efetuado com sucesso. Saldo: R$ " + cc.fazerSaque(valor) : "Valor do saque inválido.");
                     break;
                 case 4:
                     System.out.println("Programa encerrado.");
@@ -48,13 +47,8 @@ public class App {
                     System.out.println("Opção inválida.");
             }
          } while (opcao != 4);
-        
-        
-        
-        
-        
-        leia.close();
 
-       
+
+        leia.close();
     }
 }

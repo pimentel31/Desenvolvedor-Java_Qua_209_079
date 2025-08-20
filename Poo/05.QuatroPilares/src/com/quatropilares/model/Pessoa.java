@@ -1,6 +1,6 @@
 package com.quatropilares.model;
 
-public class Pessoa {
+abstract public class Pessoa {
     //atributos
     private String email;
     private String telefone;
@@ -12,7 +12,6 @@ public class Pessoa {
         this.telefone = telefone;
         this.endereco = endereco;
     }
-
 
     public String getEmail() {
         return this.email;
@@ -37,6 +36,7 @@ public class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
 
 
 }

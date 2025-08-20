@@ -1,15 +1,13 @@
 package com.quatropilares.model;
 
-public class PessoaJuridica extends Pessoa {
-
-private String razaoSocial;
+final public class PessoaJuridica extends Pessoa {
+    private String razaoSocial;
     private String nomeFantasia;
     private String cnpj;
 
 
-
     public PessoaJuridica(String razaoSocial, String nomeFantasia, String cnpj, String email, String telefone, String endereco) {
-       super(email, telefone, endereco);
+        super(email, telefone, endereco);
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;

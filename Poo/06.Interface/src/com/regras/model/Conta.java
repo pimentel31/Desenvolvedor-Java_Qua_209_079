@@ -3,7 +3,7 @@ package com.regras.model;
 import com.regras.interfaces.IConta;
 
 public class Conta implements IConta {
-    private String titular;
+    public String titular;
     private String cpf;
     private String agencia;
     private String nConta;
@@ -60,23 +60,22 @@ public class Conta implements IConta {
 
     @Override
     public void exibirDados() {
-       System.out.println("nome do titular: " + this.titular);
+       System.out.println("Nome do titular: " + this.titular);
        System.out.println("CPF do titular: " + this.cpf);
-       System.out.println("agencia: " + this.agencia);
+       System.out.println("Agência: " + this.agencia);
        System.out.println("Numero da conta: " + this.nConta);
-       System.out.println("Saldo da conta R$  " + String.format("%.2f", this.saldo) );
+       System.out.println("Saldo da conta: R$ " + String.format("%2.f", this.saldo));
     }
 
     @Override
     public double fazerDeposito(double valor) {
         this.saldo += valor;
         return this.saldo;
-      
     }
 
     @Override
     public double fazerSaque(double valor) {
-         this.saldo -= valor;
+        this.saldo += valor;
         return this.saldo;
     }
 
