@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <h1>Atividade 007</h1>
+    <hr/>
+    <form method="">
+        <label for="Nome">Nome:</label><br/>
+        <input type="text" placeholder="Digite o seu Nome" minlength="3" maxlength="32" /><br/> <br/>
+
+        <label for="sobrenome">Sobre Nome:</label><br/>
+        <input type="text" placeholder="Digite o seu Sobre Nome" minlength="3" maxlength="32" /><br/> <br/>
+
+        <label for="dataNascimento">Data de Nacimento</label><br/>
+        <input type="date"/><br/><br/>
+
+        <label for="email">E-mail:</label><br/>
+  <input type="email" id="email" name="email" placeholder="digite o seu email" required>
+  <button type="submit">Enviar</button><br/><br/>
+
+          <label for="telefone">Telefone:</label><br/>
+  <input type="tel" name="telefone" placeholder="(XX) XXXX-XXXX" pattern="[0-9]{4,5}-[0-9]{4}" title="Insira um número de telefone válido" />
+  <button type="submit">Enviar</button><br/><br/>
+
+   <label for="rua">Rua:</label><br/>
+      <input type="text" id="rua" name="rua" autocomplete="street-address">
+
+
+
+         <label for="genero"></label><br /><br />
+                <input type="radio" name="genero"/><span>Masculino</span><br/>
+                <input type="radio" name="genero"/><span>Feminino</span><br/>
+                <input type="radio" name="genero"/><span>Outros</span><br/><br/>
+
+                <label for="escolaridade">Escolaridade:</label><br/>
+        <select>
+                  <option name="escolaridade">Escolha uma opção....</option>
+                  <option name="escolaridade">Nivel Fundamentel....</option>
+                  <option name="escolaridade">Nivel Medio....</option>
+                  <option name="escolaridade">Nivel Tecnico....</option>
+                  <option name="escolaridade">Nivel Superior....</option>
+                  <option name="escolaridade">Mestrado....</option>
+                  <option name="escolaridade">Doutorado....</option> 
+    </form>
+</body>
+</html>
