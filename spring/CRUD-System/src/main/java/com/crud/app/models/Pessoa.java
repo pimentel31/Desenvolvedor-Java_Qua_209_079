@@ -1,7 +1,6 @@
 package com.crud.app.models;
 
 import java.io.Serializable;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +9,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Pessoa implements Serializable {
     // atributos
-    private static final long serialVersionUID = 1l;
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,12 +18,19 @@ public class Pessoa implements Serializable {
     private String cpf;
     private String email;
 
-    //contrutor
-    public Pessoa(){
-        
+    // construtor
+    public Pessoa() {
     }
     
 
+    public Pessoa(long idPessoa, String nome, String cpf, String email) {
+        this.idPessoa = idPessoa;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+    }
+
+    // getters e setters
     public long getIdPessoa() {
         return this.idPessoa;
     }
@@ -56,8 +62,4 @@ public class Pessoa implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    {
-    }
-
 }
