@@ -8,3 +8,14 @@ public interface AppRepository extends CrudRepository<Pessoa, Long> {
     Pessoa findByIdPessoa(long idPessoa);
 }
     
+
+
+
+
+
+
+
+
+
+
+
