@@ -6,16 +6,6 @@ import com.crud.app.models.Pessoa;
 
 public interface AppRepository extends CrudRepository<Pessoa, Long> {
     Pessoa findByIdPessoa(long idPessoa);
+    Pessoa deleteByidPessoa(long idPessoa);
 }
     
-
-
-
-
-
-
-
-
-
-
-
