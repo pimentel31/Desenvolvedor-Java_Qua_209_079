@@ -57,8 +57,8 @@ public String alterarUsuario(@Validated Pessoa usuario, BindingResult result, Re
 }
 
 //excluir usuario
-@RequestMapping("/confirmarEclusao/{idPessoa}")
-public ModelAndView confirmareclusao(@PathVariable("idPessoa") long idPessoa){
+@RequestMapping("/confirmarExclusao/{idPessoa}")
+public ModelAndView confirmarexclusao(@PathVariable("idPessoa") long idPessoa){
 Pessoa usuario = csr.findByIdPessoa(idPessoa);
 ModelAndView mv = new ModelAndView("excluirUsuario");
 mv.addObject("usuario", usuario);
@@ -69,7 +69,7 @@ return mv;
 public String excluirUsuario(long idPessoa){
     Pessoa usuario = csr.findByIdPessoa(idPessoa);
     csr.delete(usuario);
-    return "redirect:/listarUsuarios";
+    return "redirect:/listarUsuario";
 }
 
 }
